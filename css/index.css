@@ -1,0 +1,275 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  width: 100%; }
+
+body {
+  width: 100%; }
+
+.margin {
+  width: 980px;
+  margin: 0 auto; }
+
+.h1 {
+  width: 100%;
+  height: 40px;
+  background: #444444; }
+
+.d1 {
+  position: relative;
+  z-index: 2;
+  height: 46px;
+  background: #323232; }
+  .d1 ul {
+    display: flex;
+    justify-content: space-between; }
+    .d1 ul #l0 {
+      width: 200px; }
+      .d1 ul #l0 a {
+        width: 100%; }
+    .d1 ul li {
+      width: 68px;
+      height: 40px;
+      text-align: center;
+      border: 3px double #323232; }
+      .d1 ul li ul {
+        display: none;
+        position: absolute;
+        top: 47px; }
+        .d1 ul li ul li {
+          width: 68px;
+          height: 30px;
+          text-align: center;
+          border: 3px solid #000;
+          border-radius: 20px; }
+          .d1 ul li ul li a {
+            font: 12px/30px "";
+            color: #fff; }
+      .d1 ul li ul:hover li {
+        border: 3px double #fff;
+        border-radius: 20px;
+        transition: 1s;
+        font: 700 12px/30px ""; }
+      .d1 ul li a {
+        font: 700 12px/44px "";
+        color: #fff; }
+    .d1 ul #btn {
+      background: #C0C0C0;
+      font: 12px/20px "";
+      color: #fff;
+      width: 35px;
+      height: 20px;
+      margin: 13px 0;
+      border-radius: 3px; }
+    .d1 ul li:hover {
+      border: 3px double #009b72;
+      border-radius: 20px;
+      transition: 1s; }
+    .d1 ul li:hover a {
+      font: 700 12px/44px "";
+      color: #009b72; }
+
+article {
+  padding-bottom: 5px;
+  width: 100%;
+  height: 432px; }
+  article .bg {
+    position: absolute;
+    top: 84px;
+    left: 0;
+    width: 100%;
+    height: 498px; }
+  article .bg-box-1 {
+    background: url("../img/10.png") no-repeat center/cover; }
+  article .bg-box-2 {
+    background: url("../img/hero_alt1_large.jpg") no-repeat center/cover; }
+  article .bg-box-3 {
+    background: url("../img/hero_medium_001.jpg") no-repeat center/cover; }
+  article .bg-box-4 {
+    background: url("../img/123.jpg") no-repeat center/cover; }
+  article #wrap {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1000px;
+    height: 400px; }
+  article #wrap > ul {
+    width: 120%;
+    list-style: none; }
+  article #wrap > ul > li {
+    float: left;
+    width: 100px;
+    height: 400px;
+    cursor: pointer; }
+  article #wrap > ul > li:nth-child(1) {
+    background: url("../img/10.png") no-repeat center/cover; }
+  article #wrap > ul > li:nth-child(2) {
+    background: url("../img/hero_alt1_large.jpg") no-repeat center/cover; }
+  article #wrap > ul > li:nth-child(3) {
+    background: url("../img/hero_medium_001.jpg") no-repeat center/contain; }
+  article #wrap > ul > li:nth-child(4) {
+    background: url("../img/123.jpg") no-repeat center/contain;
+    width: 700px; }
+  article #wrap > ul > li > .text {
+    width: 100px;
+    height: 100%;
+    background: #000;
+    opacity: .5; }
+  article #wrap > ul > li > .text p {
+    padding: 20px 40px;
+    font-family: 'Microsoft yahei';
+    color: #fff;
+    width: 100%; }
+
+section {
+  margin-top: 3px;
+  width: 100%; }
+  section .pic {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 66px; }
+    section .pic img {
+      margin: 100px auto; }
+    section .pic div {
+      width: 337px;
+      height: 268px;
+      text-align: center;
+      vertical-align: bottom; }
+    section .pic .pic2 {
+      position: relative;
+      background: #333;
+      text-align: center; }
+      section .pic .pic2 p:nth-child(3) {
+        width: 336px;
+        height: 184px;
+        background: url("../img/wwdc17_imac_pro_large.png") no-repeat center;
+        background-size: contain; }
+      section .pic .pic2 h3 {
+        font: 800 16px/24px "微软雅黑";
+        color: #fff; }
+      section .pic .pic2 h1 {
+        font: 16px/24px "微软雅黑";
+        color: #fff; }
+      section .pic .pic2 .img02 {
+        width: 182px;
+        height: 182px;
+        margin-top: 0; }
+      section .pic .pic2 .bb {
+        position: absolute;
+        left: 0px;
+        top: 0;
+        background: #F6F6F6;
+        opacity: 0;
+        transition: 1.5s;
+        width: 337px;
+        height: 268px; }
+    section .pic .pic2:hover .bb {
+      opacity: 0.5; }
+    section .pic .pic3 {
+      position: relative; }
+      section .pic .pic3 p:nth-child(3) {
+        width: 336px;
+        height: 194px;
+        background: url("../img/wwdc17_app_store_large_2x.jpg") no-repeat center;
+        background-size: contain; }
+      section .pic .pic3 .cc {
+        position: absolute;
+        left: 0px;
+        top: 0;
+        background: #222222;
+        opacity: 0;
+        transition: 1.5s;
+        width: 337px;
+        height: 268px; }
+    section .pic .pic3:hover .cc {
+      opacity: 0.7; }
+    section .pic .pic1 {
+      background: #fafafa;
+      position: relative; }
+      section .pic .pic1 p:nth-child(3) {
+        width: 336px;
+        height: 250px;
+        background: url("../img/wwdc17_event_small_2x.jpg") no-repeat center;
+        background-size: contain; }
+      section .pic .pic1 .aa {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #222222;
+        opacity: 0;
+        transition: 1.5s;
+        width: 337px;
+        height: 268px; }
+    section .pic .pic1:hover .aa {
+      opacity: 0.6; }
+    section .pic .pic4 {
+      position: relative; }
+      section .pic .pic4 img {
+        margin: 100px auto; }
+      section .pic .pic4 p:nth-child(3) {
+        width: 336px;
+        height: 194px;
+        background: url("../img/iphone_upgrade_large_2x.png") no-repeat center;
+        background-size: contain; }
+      section .pic .pic4 .dd {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #222222;
+        opacity: 0;
+        transition: 1.5s;
+        width: 337px;
+        height: 268px; }
+    section .pic .pic4:hover .dd {
+      opacity: 0.7; }
+  section h3 {
+    font: 800 16px/24px "微软雅黑";
+    color: #111111;
+    margin-top: 36px; }
+
+footer {
+  margin-top: 3px;
+  background: #f2f2f2; }
+  footer .fo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    footer .fo dl {
+      width: 196px;
+      margin-top: 22px; }
+      footer .fo dl dt {
+        font: 700 10px/20px "";
+        color: #333333; }
+      footer .fo dl dd {
+        font: 10px/20px "";
+        color: #555555; }
+      footer .fo dl dd:hover a {
+        border-bottom: 1px solid #009B72;
+        color: #009B72; }
+      footer .fo dl .d6 {
+        margin-top: 26px; }
+      footer .fo dl .d2 {
+        margin-top: 26px; }
+  footer .f1 p {
+    font: 10px/30px "";
+    color: #888895;
+    width: 980px;
+    border-bottom: 1px solid #c0c0c0; }
+  footer .f1 span {
+    font: 10px/36px "";
+    color: #888895; }
+  footer .f1 a {
+    margin: 0 6px;
+    color: #222222; }
+  footer .f1 a:hover {
+    color: #009B72; }
+
+/*# sourceMappingURL=index.css.map */

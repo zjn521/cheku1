@@ -1,0 +1,282 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  width: 100%; }
+
+body {
+  width: 100%; }
+
+.margin {
+  width: 980px;
+  margin: 0 auto; }
+
+.h1 {
+  width: 100%;
+  height: 40px;
+  background: #444444; }
+
+.d1 {
+  position: relative;
+  z-index: 2;
+  height: 46px;
+  background: #323232; }
+  .d1 ul {
+    display: flex;
+    justify-content: space-between; }
+    .d1 ul li {
+      width: 68px;
+      height: 40px;
+      text-align: center;
+      border: 3px double #323232; }
+      .d1 ul li ul {
+        display: none;
+        position: absolute;
+        top: 47px; }
+        .d1 ul li ul li {
+          width: 68px;
+          height: 30px;
+          text-align: center;
+          border: 3px solid #000;
+          border-radius: 20px; }
+          .d1 ul li ul li a {
+            font: 12px/30px "";
+            color: #fff; }
+      .d1 ul li ul:hover li {
+        border: 3px double #fff;
+        border-radius: 20px;
+        transition: 1s; }
+      .d1 ul li a {
+        font: 700 12px/44px "";
+        color: #fff; }
+    .d1 ul li:hover {
+      border: 3px double #009b72;
+      border-radius: 20px;
+      transition: 1s; }
+    .d1 ul li:hover a {
+      font: 700 12px/44px "";
+      color: #009b72; }
+
+section {
+  height: 114px;
+  background: #2d2d2d; }
+  section ul {
+    text-align: center;
+    display: flex;
+    justify-content: space-between; }
+    section ul li:nth-child(1) {
+      margin-left: 50px; }
+    section ul li:nth-child(10) {
+      margin-right: 50px; }
+    section ul a {
+      display: block;
+      font: 10px/20px "微软雅黑";
+      color: #fff; }
+    section ul span {
+      display: block;
+      font: 6px/16px "微软雅黑";
+      color: #d45818; }
+
+#a {
+  background: #1a1a1a;
+  position: relative; }
+  #a .mar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 1026px;
+    background: #C0C0C0;
+    transition: 1.5s; }
+    #a .mar p {
+      font: 30px/50px "微软雅黑";
+      color: #D45818;
+      text-align: center; }
+    #a .mar .mar-1 {
+      margin: 420px auto; }
+  #a:hover .mar {
+    display: block;
+    opacity: .5; }
+  #a .margin-0 {
+    width: 100%;
+    height: 1026px;
+    text-align: center;
+    margin: 0 auto;
+    background: url("../img/9.png") no-repeat bottom; }
+    #a .margin-0 .margin-1 {
+      padding: 74px 0 0 0; }
+    #a .margin-0 h2 {
+      width: 122px;
+      height: 34px;
+      border: 1px solid #888888;
+      border-radius: 6%;
+      font: 14px/34px "微软雅黑";
+      color: #888888;
+      margin: 0 auto; }
+    #a .margin-0 h3 {
+      font: 70px/100px "微软雅黑";
+      color: #fff; }
+    #a .margin-0 h1 {
+      font: 32px/70px "微软雅黑";
+      color: #fff; }
+    #a .margin-0 a {
+      font: 20px/56px "微软雅黑";
+      color: #66bbff; }
+    #a .margin-0 a:hover {
+      border-bottom: 1px solid #66bbff; }
+
+#banner {
+  position: relative;
+  height: 1140px;
+  background: #fafafa;
+  margin-top: 44px; }
+  #banner .banner-0 {
+    margin: 0 auto;
+    width: 100%;
+    height: 1190px;
+    background: url("../img/10.png") no-repeat center; }
+    #banner .banner-0 .banner-1 {
+      text-align: center; }
+      #banner .banner-0 .banner-1 h3 {
+        font: 70px/108px "微软雅黑";
+        color: #333333; }
+      #banner .banner-0 .banner-1 h2 {
+        font: 36px/72px "微软雅黑";
+        color: #333333; }
+      #banner .banner-0 .banner-1 a {
+        display: block;
+        font: 24px/62px "微软雅黑";
+        color: #66bbff; }
+    #banner .banner-0:hover .ban {
+      display: block;
+      opacity: 0.9; }
+    #banner .banner-0 .ban {
+      width: 100%;
+      height: 1190px;
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #555555;
+      transition: 1.5s; }
+      #banner .banner-0 .ban img {
+        height: 250px;
+        width: 1002px;
+        margin: 500px auto;
+        display: block; }
+
+#pic {
+  height: 650px;
+  background: url("../img/11.png") no-repeat center; }
+  #pic .pic1 {
+    text-align: center;
+    padding-top: 50px; }
+    #pic .pic1 h3 {
+      font: 38px/108px "微软雅黑";
+      color: #333333; }
+    #pic .pic1 a {
+      font: 18px/62px "微软雅黑";
+      color: #66bbff; }
+    #pic .pic1 a:hover {
+      border-bottom: 2px solid #66bbff; }
+
+#photo {
+  background: url("../img/12.png") no-repeat center;
+  height: 502px; }
+  #photo .pic1 {
+    padding: 150px 0 0 150px; }
+    #photo .pic1 h3 {
+      font: 38px/108px "微软雅黑";
+      color: #fff;
+      margin: auto; }
+    #photo .pic1 p {
+      width: 122px;
+      height: 34px;
+      border: 1px solid #888888;
+      border-radius: 6%;
+      font: 14px/34px "微软雅黑";
+      color: #888888;
+      text-align: center; }
+
+footer {
+  margin-top: 3px;
+  background: #f2f2f2; }
+  footer .fo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    footer .fo dl {
+      width: 196px;
+      margin-top: 22px; }
+      footer .fo dl dt {
+        font: 700 10px/20px "";
+        color: #333333; }
+      footer .fo dl dd {
+        font: 10px/20px "";
+        color: #555555; }
+      footer .fo dl dd:hover a {
+        border-bottom: 1px solid #444444; }
+      footer .fo dl .d6 {
+        margin-top: 26px; }
+      footer .fo dl .d2 {
+        margin-top: 26px; }
+  footer .f1 p {
+    font: 10px/30px "";
+    color: #888895;
+    width: 100%;
+    border-bottom: 1px solid #c0c0c0; }
+  footer .f1 span {
+    font: 10px/36px "";
+    color: #888895; }
+  footer .f1 a {
+    margin: 0 6px;
+    color: #222222; }
+
+@media screen and (max-width: 800px) {
+  .margin {
+    width: 100%; }
+
+  .d1 ul li {
+    width: 100%;
+    display: none; }
+
+  article .margin-0 {
+    width: 100%; }
+
+  section ul li {
+    width: 100%;
+    display: none; }
+
+  #banner .banner-0 {
+    width: 100%; }
+
+  #pic .pic1 {
+    width: 100%; }
+
+  #photo {
+    width: 100%; }
+
+  footer dl {
+    width: 100%; } }
+@media screen and (max-width: 1000px) {
+  .d1 ul li {
+    width: 100%;
+    display: none; }
+
+  .f1 {
+    display: none; }
+
+  section ul li {
+    width: 100%;
+    display: none; }
+
+  #banner .banner-0 {
+    width: 100%; } }
+@media screen and (max-width: 500px) {
+  .f1 {
+    display: none; } }
+
+/*# sourceMappingURL=Mac.css.map */

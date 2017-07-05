@@ -1,0 +1,368 @@
+@charset "utf-8";
+*{
+  margin:0;
+  padding:0;
+}
+html{
+  width:100%;
+}
+body{
+  width:100%;
+  background:#f2f2f2;
+}
+.margin{
+  width:806px;
+  margin:0 auto;
+}
+
+.h1{
+  width:100%;
+  height:40px;
+  background:#444444;
+  color:#fff;
+  opacity: 0.8;
+}
+.d1{
+    height:44px;
+    opacity:0.7;
+    background:#323232;
+    ul{
+
+        display: flex;
+        justify-content: space-between;
+        li{
+            width:68px;
+            height:40px;
+            text-align: center;
+            border:2px solid #323232;
+            a{
+                    font:700 12px/44px "";
+                    color:#fff;
+           
+                }
+           
+        }
+            li:hover{
+                border:2px solid #009b72;
+                 border-radius: 20px;
+                transition: 1s;
+            }
+            li:hover a{
+                font:700 12px/44px "";
+                color:#009b72;
+            }
+       
+    }
+} #s1{
+  height:114px;
+  background:#2d2d2d;
+  opacity: 0.8;
+  ul{
+    text-align: center;
+    display: flex;
+    justify-content:space-between;
+    li:nth-child(1){
+      margin-left:50px;
+    }
+    li:nth-child(10){
+      margin-right:50px;
+    }
+    a{
+      display: block;
+      font:10px/20px "微软雅黑";
+      color:#fff;
+    }
+    span{
+      display: block;
+      font:6px/16px "微软雅黑";
+      color:#d45818;
+    }
+  }
+}
+nav{
+  width:100%;
+  height:772px;
+  .bo{
+    z-index: -2;
+    position:absolute;
+    left:0;
+    top:40px;
+    background:url("../img/50.png") no-repeat center;
+    width:100%;
+    height:930px;
+    background-size: 100%;
+    .bor{
+      position: absolute;
+      left:150px;
+      top:350px;
+      p{
+        font:35px/70px "微软雅黑";
+        color:#fff;
+      }
+      input{
+          border:none;
+        border-radius: 4px;
+        background:#2f93e2;
+
+        font: 14px/34px "微软雅黑";
+        color:#fff;
+        width:170px;
+        height:34px;
+      }
+      a{
+        font:12px/40px "微软雅黑";
+        color:#fff;
+      }
+    }
+  }
+
+}
+#middle{
+  width:900px;
+  height:1266px;
+  margin:-100px auto 0;
+  background:#fff;
+
+  img{
+    width:336px;
+    height:338px;
+  }
+  .p1{
+    font:32px/150px "微软雅黑";
+    color:#333333;
+    margin-left:100px;
+  }
+  .one{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width:700px;
+    margin:0 auto;
+     img{
+          transition: 1s;
+          box-shadow:8px 8px 5px #444444 ;
+      }
+      img:hover{
+          transform:translate(0,-20px);
+      }
+      p{
+          margin-top:20px;
+      }
+    .one-1{
+      width:336px;
+    
+      span{
+        display: block;
+        font:26px/44px "微软雅黑";
+        color:#333333;
+      }
+      p{
+        font:18px/30px "微软雅黑";
+        color:#333333;
+      }
+      a{
+        font:14px/38px "微软雅黑";
+        color:#333333;
+      }
+    }
+    .one-2{
+      width:336px;
+      span{
+        display: block;
+        font:26px/44px "微软雅黑";
+        color:#333333;
+      }
+      p{
+        font:18px/30px "微软雅黑";
+        color:#333333;
+      }
+      a{
+        font:14px/38px "微软雅黑";
+        color:#333333;
+      }
+    }
+    .one-3{
+        margin-top:50px;
+      width:336px;
+      span{
+        display: block;
+        font:26px/44px "微软雅黑";
+        color:#333333;
+      }
+      p{
+        font:18px/30px "微软雅黑";
+        color:#333333;
+      }
+      a{
+        font:14px/38px "微软雅黑";
+        color:#333333;
+      }
+    }
+    .one-4{
+      width:336px;
+       margin-top:50px;
+      span{
+        display: block;
+        font:26px/44px "微软雅黑";
+        color:#333333;
+      }
+      p{
+        font:18px/30px "微软雅黑";
+        color:#333333;
+      }
+      a{
+        font:14px/38px "微软雅黑";
+        color:#333333;
+      }
+    }
+  }
+}
+#bottom{
+  margin-top:68px;
+  background-color:#f5fdf1;
+  width:100%;
+  height:652px;
+  .bottom-0{
+    background:url("../img/55.png") no-repeat center;
+    width:100%;
+    height:652px;
+    span{
+      font:16px/44px "微软雅黑";
+      color:#333333;
+    }
+    p{
+      font:28px/42px "微软雅黑";
+      color:#333333;
+    }
+    a{
+      font:18px/50px "微软雅黑";
+      color:#333333;
+    }
+  }
+  .bottom-1{
+    padding:242px 0 0 84px;
+  }
+}
+#top{
+
+  background-color:#fff1de;
+  width:100%;
+  height:730px;
+  .bottom-0{
+    background:url("../img/56.png") no-repeat center;
+    width:100%;
+    height:730px;
+    span{
+      font:16px/44px "微软雅黑";
+      color:#333333;
+    }
+    p{
+      font:28px/42px "微软雅黑";
+      color:#333333;
+    }
+    a{
+      font:18px/50px "微软雅黑";
+      color:#333333;
+    }
+  }
+  .bottom-1{
+    padding:242px 0 0 84px;
+  }
+}
+#left{
+
+  background-color:#e9f7f8;
+  width:100%;
+  height:800px;
+  .bottom-0{
+    background:url("../img/58.png") no-repeat center;
+    width:100%;
+    height:800px;
+    span{
+      font:16px/44px "微软雅黑";
+      color:#333333;
+    }
+    p{
+      font:28px/42px "微软雅黑";
+      color:#333333;
+    }
+    a{
+      font:18px/50px "微软雅黑";
+      color:#333333;
+    }
+  }
+  .bottom-1{
+    padding:242px 0 0 84px;
+  }
+}
+
+footer{
+  margin-top: 3px;
+  background:#f2f2f2;
+  .fo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    dl{
+      width:160px;
+      margin-top:22px;
+      dt{
+        font:700 10px/20px "";
+        color:#333333;
+      }
+      dd{
+        font:10px/20px "";
+        color:#555555;
+
+      }
+      dd:hover a{
+        border-bottom:1px solid #444444;
+        color:#009B72;
+      }
+      .d6{
+        margin-top:26px;
+      }
+      .d2{
+        margin-top:26px;
+      }
+    }
+  }
+  .f1{
+    p{
+      font:10px/30px "";
+      color:#888895;
+      width:100%;
+      border-bottom:1px solid #c0c0c0;
+    }
+    span{
+      font:10px/36px "";
+      color:#888895;
+    }
+    a{
+      margin:0 6px;
+      color:#222222;
+    }
+  }
+}
+@media screen and(max-width:800px){
+  .margin{width:100%;}
+  .d1 ul li {width:100%;display:none;}
+  article .margin-0{width:100%;}
+  section ul li {width:100%;display: none;}
+  #middle{width:100%;}
+  #middle .one{width:100%;}
+  footer dl{width:100%;}
+}
+
+@media screen and(max-width:1000px){
+  .d1 ul li {width:100%;display:none;}
+  .f1{display:none;}
+  section ul li {width:100%;display: none;}
+  #banner .banner-0{width:100%;}
+}
+@media screen and(max-width:500px){
+
+  .f1{display:none;}
+
+}
+

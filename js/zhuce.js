@@ -1,0 +1,21 @@
+$(function(){
+	$("#userName").blur(function(){
+		$.post("zhuce.php",{shouji:$("#btn1").val(),mima:$("btn2").val()},function(data){
+			if(data=="1"){
+				$("#userMsg").html("此用户名可以使用，赶紧注册吧");
+			}else{
+				$("#userMsg").html("此用户名已存在，请重新选择");
+			}
+		});		
+	});
+	$("#userName").blur(function(){
+		$.post("zhuce1.php",{shouji:$("#btn1").val(),mima:$("btn2").val()},function(data){
+			if(data=="1"){
+				$("#userMsg").html("此用户名可以使用，赶紧注册吧");
+			}else{
+				$("#userMsg").html("此用户名已存在，请重新选择");
+			}
+		});		
+	});
+	
+});

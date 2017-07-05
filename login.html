@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BANANA</title>
+    <link href="css/login.css" rel="stylesheet" tyspane="text/css">
+    <link href="css/public.css" rel="stylesheet" tyspane="text/css">
+    
+</head>
+<body>
+<head>
+    <div class="d1">
+        <div class="margin clear">
+            <ul>
+                <li><a href="index.html"><img src="img/1.gif"></a>
+                </li>
+                <li class="bigli"><a href="Mac.html">Mac</a>
+                	<ul>
+                		<li><a href="#">Macbook</a></li>
+                		<li><a href="#">Air</a></li>
+                		<li><a href="#">Mac Pro</a></li>
+                		<li><a href="#">iMac</a></li>
+                		<li><a href="#">iMac Pro</a></li>
+                		<li><a href="#">Mac pro</a></li>
+                		<li><a href="#">Mac mini</a></li>
+                	</ul>
+                </li>
+                <li class="bigli"><a href="iPad.html">iPad</a>
+                	<ul>
+                		<li><a href="#">iPad Pro</a></li>
+                		<li><a href="#">iPad</a></li>
+                		<li><a href="#">iPad mini4</a></li>
+                		<li><a href="#">iOS 10</a></li>
+                	</ul>
+                </li>
+                <li class="bigli"><a href="phone.html">iPhone</a>
+                	<ul>
+                		<li><a href="#">iPhone 7</a></li>
+                		<li><a href="#">iPhone 6s</a></li>
+                		<li><a href="#">iPhone 6</a></li>
+                		<li><a href="#">iPhone se</a></li>
+                		<li><a href="#">iOS 10</a></li>
+                	</ul>
+                </li>
+                <li class="bigli"><a href="Watch.html">Watch</a>
+                	<ul>
+                		<li><a href="#">Series 2</a></li>
+                		<li><a href="#">Nike+</a></li>
+                		<li><a href="#">Hermes</a></li>
+                		<li><a href="#">Edition</a></li>
+                		<li><a href="#">Series 1</a></li>
+                		<li><a href="#">watchOS</a></li>
+                	</ul>
+                </li>
+                <li class="bigli"><a href="music.html">Music</a>
+                	<ul>
+                		<li><a href="#">Apple music</a></li>
+                		<li><a href="#">iTunes</a></li>
+                		<li><a href="#">iPod</a></li>
+                		<li><a href="#">Music 配件</a></li>
+                	</ul>
+                </li>
+                <li><a href="#">技术支持</a></li>
+                <li><a href="#"><img src="img/2.gif"/></a></li>
+                <li><a href="market.html"><img src="img/3.gif"/></a></li>
+            </ul>
+        </div>
+    </div>
+</head>
+<section>
+	<div class="margin">
+		<div class="name">
+			<img src="img/logo.gif" class="img01"/>
+			<div class="name1">
+				<span><a href="zhuce.html">注册</a></span>
+				<a href="zhuce.html">创建您的Apple ID</a>
+				<span><a href="#">常见问题解答</a></span>
+			</div>
+		</div>
+			
+	</div>
+</section>
+<aside>
+	<div class="ba">
+		
+	</div>
+	<div class="bo">
+		<p>Apple ID</p>
+		<span>管理您的Apple账户</span>
+		<input type="text" placeholder="Apple ID" class="btn0"/>
+		<input type="password" placeholder="密码" class="btn1"/>
+		<input type="button" class="btn2"/>
+		<span class="sp5">忘了Apple ID或密码？</span>
+	</div>
+</aside>
+<nav>
+	<div class="app">
+		<p>您的账户适用于Apple的所有服务</p>
+		<span class="sp4">使用一个Apple ID和密码即可访问所有的Apple服</span>
+		<span>务。</span><a>了解有关Apple ID的更多信息</a>
+	</div>	
+	<div class="app1">
+		<img src="img/app.jpg"/>
+		<a href="zhuce.html">创建您的Apple ID ></a>
+	</div>
+</nav>
+<footer>
+    <div class="margin">
+        <div class="f1">
+            <p>更多选购方式：前往 Apple Store 零售店，致电 400-666-8800 或查找在你附近的授权经销商。</p>
+            <span>Copyright "&copy" 2017 Apple Inc. 保留所有权利。</span>
+            <a href="#">隐私政策</a>
+            <span>|</span>
+            <a href="#" class="a1">使用条款</a>
+            <span>|</span>
+            <a href="#">销售政策</a>
+            <span>|</span>
+            <a href="#" class="a2">法律信息</a>
+            <span>|</span>
+            <a href="#">网站地图</a>
+           
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/cookieTools.js"></script>
+<script type="text/javascript">
+ $(function() {
+    $('.bigli').mousemove(function(){
+        if($(this).find('ul').is(':animated')==false){
+            $(this).find('ul').slideDown('normal');
+        }
+    });
+    $('.bigli').mouseleave(function(){
+        $(this).find('ul').slideUp('normal');
+    });
+    
+    
+    $(".btn2").click(function(){
+		$.post("php/login.php",{youxiang:$(".btn0").val(),mima:$(".btn1").val()},function(data){
+			//console.log(data);
+			if(data=="1"){
+				$("#userMsg").html("登录成功");
+				saveCookie("youxiang",$(".btn0").val(),30);
+				location.href="index.html";
+			}else{
+				$("#s1").html("账号或密码有误");
+			}
+		});	
+	});
+});
+
+</script>
