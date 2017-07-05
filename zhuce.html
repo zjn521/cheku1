@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BANANA</title>
+    <link href="css/zhuce.css" rel="stylesheet" tyspane="text/css">
+    <link href="css/public.css" rel="stylesheet" tyspane="text/css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+</head>
+<body>
+<head>
+    <div class="h1">
+        <span>《广告》</span>
+    </div>
+    <div class="d1">
+        <div class="margin clear">
+            <ul>
+            	<li><a href="index.html"><img src="img/1.gif"></a></li>
+                <li><a href="Mac.html">Mac</a></li>
+                <li><a href="iPad.html">iPad</a></li>
+                <li><a href="phone.html">iPhone</a></li>
+                <li><a href="Watch.html">Watch</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="#">技术支持</a></li>
+                <li><a href="#"><img src="img/2.gif"/></a></li>
+                <li><a href="market.html"><img src="img/3.gif"/></a></li>
+            </ul>
+        </div>
+    </div>
+</head>
+<section>
+	<div class="margin">
+		<div class="name">
+			<img src="img/logo.gif" class="img01"/>
+			<div class="name1">
+				<span><a href="login.html">登录</a></span>
+				
+				<span><a href="#">常见问题解答</a></span>
+			</div>
+		</div>
+			
+	</div>
+</section>
+<article>
+	<div id="pic"></div>
+</article>
+<aside>
+	<div class="banner">
+		<div class="banner-1">
+			<div class="one">
+				<p>只需要一个Apple ID,您即可访问Apple所有内容</p>
+				<div class="sp">
+					<span>已有一个Apple ID?</span>
+					<a href="#">在此查找></a>	
+				</div>
+				<!--
+                	<div class="one-1">
+						<input type="text" placeholder="姓氏" class="p1"/>
+						<input type="text" placeholder="名字" class="p2"/>
+					</div>
+                -->
+				<select class="btn">
+					<!--
+                    <option>英属印度洋领地</option>
+					<option>约旦</option>
+					<option>越南</option>
+					<option>加拿大</option>
+					<option selected="selected">中国</option>
+					<option>中非国和国</option>
+					<option>智利</option>
+					<option>梵蒂冈</option>
+					<option>中国香港特别行政区</option>
+					<option>中国澳门特别行政区</option>
+                    -->
+				</select>
+				<!--
+                	作者：offline
+                	时间：2017-06-28
+                	描述：<input type="text" class="p3" placeholder="出生日期"/>
+                -->
+			</div>
+			<div class="two">
+				<div class="two-1">
+					
+						<input type="text" placeholder="name@example.com" id="btn"/>
+						<span class="s1"></span>
+					
+					
+						<span class="s3">这将是您的新Apple ID.</span>
+				
+						<input type="password" placeholder="密码" id="btn2"/>
+						<span class="s2"></span>
+						<p>密码必须为5~14位数字字母组合</p>
+					
+					
+					<!--
+                    	作者：offline
+                    	时间：2017-06-28
+                    	描述：<input type="password" placeholder="确认密码"/>
+                    -->
+				</div> 
+			</div>
+			<div class="three">
+				<div class="three-0">
+					<div class="three-1">
+						<p><img src="img/right.gif"/>公告</p>
+						<span>获取有关Apple产品，服务，软件更新等的公告，推荐。</span>	
+					</div>
+					<div class="three-2">
+						<p><img src="img/right.gif"/>Apple Music丶新App及更多内容</p>
+						<span>获取有关音乐，App，电影，电视，书籍，播客等的推荐，最新发布，特别优惠和独家内容。</span>
+					</div>
+				</div>
+			</div>
+			<div class="four">
+				<div class="four-0">
+					<input type="button" id="btn1" value="注册"/>
+					
+					<p>
+						<span class="sp1"><img src="img/shua.gif" class="img00"/>新代码</span>	<span>|</span>	<span><img src="img/la.gif" class="img11"/>视力障碍</span>
+					</p>
+				</div>
+			</div>
+			<div class="five">
+				<p>
+					<span>Apple 致力于保护您的隐私。</span>
+					<a href="#">了解更多...</a>
+				</p>
+			
+			</div>
+		</div>	
+	</div>
+</aside>
+<footer>
+    <div class="margin">
+        <div class="f1">
+            <p>更多选购方式：前往 Apple Store 零售店，致电 400-666-8800 或查找在你附近的授权经销商。</p>
+            <span>Copyright "&copy" 2017 Apple Inc. 保留所有权利。</span>
+            <a href="#">隐私政策</a>
+            <span>|</span>
+            <a href="#" class="a1">使用条款</a>
+            <span>|</span>
+            <a href="#">销售政策</a>
+            <span>|</span>
+            <a href="#" class="a2">法律信息</a>
+            <span>|</span>
+            <a href="#">网站地图</a>
+           
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$.get("php/get.php",function(data){
+			var obj = eval('('+data+')');
+			for(var i=0;i<obj.length;i++){
+				$(".btn").append(
+					'<option>'+obj[i].beiyong1+'</option>'
+			    );
+			} 
+			
+		});
+	});
+window.onload=function(){
+	/*$("#btn").blur(function(){
+	    let reg = /^\w+@\w+(\.\w+)+$/;
+		let str = $("#btn").val();
+	    if(reg.test(str)){
+		    $(".s1").html("√ NICE");
+			$(".s1").css("color","green");
+			//$("#loginBtn").attr("disabled",true);
+		}else{
+		    $(".s1").html("邮箱不正确，请重新输入");
+			$(".s1").css("color","red");
+			//$("#loginBtn").attr("disabled",false);
+			return;
+		}
+		
+	});*/
+	//密码合法性验证；
+	$("#btn2").blur(function(){
+	    let reg = /^[a-zA-Z_]\w{5,14}$/;
+		let str = $("#btn2").val();
+	    if(reg.test(str)){
+		    $(".s2").html("√ NICE");
+			$(".s2").css("color","green");
+			//$("#loginBtn").attr("disabled",true);
+		}else{
+			 $(".s2").html("密码不正确，请重新输入");
+			$(".s2").css("color","red");
+			//$("#loginBtn").attr("disabled",false);
+			return;
+		}
+	});
+	
+	
+
+}
+$(function(){
+	$("#btn").blur(function(){
+		$.post("php/zhuce.php",{youxiang:$("#btn").val()},function(data){
+			
+			    let reg = /^\w+@\w+(\.\w+)+$/;
+				let str = $("#btn").val();
+			    if(reg.test(str)){
+					$(".s1").css("color","green");
+					if(data=="1"){
+						$(".s1").html("用户名可用。"); 
+					}else{
+						$(".s1").html("用户名存在，请重新选择");
+					}
+					//$("#loginBtn").attr("disabled",true);
+				}else{
+				    $(".s1").html("邮箱不正确，请重新输入");
+					$(".s1").css("color","red");
+					//$("#loginBtn").attr("disabled",false);
+					return;
+				}
+				
+			
+		});		
+	});
+	$("#btn1").click(function(){
+		$.post("php/zhuce1.php",{youxiang:$("#btn").val(),mima:$("#btn2").val()},function(data){
+			if(data=="1" && $("#btn").val()!="" && $("#btn2").val()!=""){
+				location.href="login.html";
+			}
+	
+		});		
+	});
+	
+});
+
+</script>
