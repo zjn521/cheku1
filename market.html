@@ -7,9 +7,10 @@
 	<link href="css/market.css" rel="stylesheet" tyspane="text/css">  
 	<link href="css/public.css" rel="stylesheet" tyspane="text/css">
 	<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="js/cookieTools.js" ></script>
 </head>
 <body>
-<head>
+<head> 
     <div class="d1">
         <div class="margin clear">
             <ul>
@@ -24,7 +25,7 @@
                 		<li><a href="#">iMac Pro</a></li>
                 		<li><a href="#">Mac pro</a></li>
                 		<li><a href="#">Mac mini</a></li>
-                	</ul>
+                	</ul> 
                 </li>
                 <li class="bigli"><a href="iPad.html">iPad</a>
                 	<ul>
@@ -267,11 +268,18 @@
 			for(var i=0;i<5;i++){
 				$(".se-1").append(
 				'<div class="bor0">'
-				+'<a href="#"><img src="'+obj[i].goodsImg+'"/></a>'
+				+'<a href="shopping.html?goodsId='+obj[i].goodsId+'"class="shop">'
+				+'<img src="'+obj[i].goodsImg+'"/>'
+				+'<span class="goodsId" style="display:none">'+obj[i].goodsId+'</span></a>'
 				+'<p>'+obj[i].goodsDesc+'</p>'
 				+'<span>'+obj[i].goodsName+'</span>'
 				+'</div>'
 			    );
+			    $(".shop").click(function(){
+			    	saveCookie("goodsId",$(this).find(".goodsId").html(),1);
+			    	console.log("a"+$(this).find(".goodsId").html())
+			    })
+			    
 			}
 	});
     

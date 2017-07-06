@@ -94,21 +94,36 @@
 <section>
 	<div class="margin">
 		<div class="a1">
-			<img src="img/delivery-message-banner.jpg"/>
-			<span>免费送货，还可免费退货。</span>
+            	<img src="img/delivery-message-banner.jpg"/>
+				<span>免费送货，还可免费退货。</span>
 		</div>
 		<ul>
 			<li class="l1"><p>购物袋内的产品</p></li>
 			<li class="l2">
-				<div class="l">
-					<img src="img/iphone6s-plus-silver-select-2015_AV1.jpg"/>
-				</div>
+				<div class="l" id="l">
+				<!--
+                	作者：offline
+                	时间：2017-07-06
+                	描述：
+				
+                  <img src="img/iphone6s-plus-silver-select-2015_AV1.jpg"/>
+                   
+				
+                -->
+					</div>
 				<div class="r">
 					<div class="top">
-						<span>iPhone7 Plus 32GB 黑色</span>
+						<!--
+                        	作者：offline
+                        	时间：2017-07-06
+                        	描述：
+                        	
+                        <span>iPhone7 Plus 32GB 黑色</span>
 						<a>RMB 6，388</a>
 						<input type="text"/>
 						<span class="s1">RMB 6,388</span>
+                        -->
+						
 					</div>
 					<div class="middle">
 						<span>送达日期：有现货</span>
@@ -120,12 +135,36 @@
 					</div>
 				</div>
 			</li>
-			<li class="l3"></li>
-			<li class="l4"></li>
+			<li class="l3 clear">
+				<div class="l3-1">
+					<p class="p1">
+						<span>免费送货</span>
+						<a>RMB0</a>
+					</p>
+					<!--
+                    	作者：offline
+                    	时间：2017-07-06
+                    	描述：<p class="p2">总计 RMB 6，388</p>
+                    -->
+					<p class="p3">分期每月最低约RMB532。</p>
+					<p class="p4"><a href="#">更多信息></a></p>
+				</div>
+			</li>
+			<li class="l4">
+				<div class="l4-1">
+					<a href="#">选购iPhone配件</a>
+					<span>|</span>
+					<a href="#">保存购物袋</a>
+					<span>|</span>
+					<a href="#">查看已保存的购物袋</a>
+					<span>|</span>
+					<a href="#">现在聊天</a>
+				</div>
+				<input type="button" id="btn" value="结账" />
+			</li>
 		</ul>
 	</div>
-</section>		
-       
+</section>
 <footer>
 	<div class="margin">
 		<div class="fo">
@@ -203,15 +242,34 @@
 </html>
 
 <script>
-	
-	 $(function() {
-        $('.bigli').mousemove(function(){
-            if($(this).find('ul').is(':animated')==false){
-                $(this).find('ul').slideDown('normal');
-            }
-        });
-        $('.bigli').mouseleave(function(){
-            $(this).find('ul').slideUp('normal');
-        });
+ $(function() {
+    $('.bigli').mousemove(function(){
+        if($(this).find('ul').is(':animated')==false){
+            $(this).find('ul').slideDown('normal');
+        }
     });
+    $('.bigli').mouseleave(function(){
+        $(this).find('ul').slideUp('normal');
+    });
+    
+    let goods= getCookie("goodsId");
+    console.log(goods);
+    $.get("php/getGoodsInfo.php",{goodsId:goods},function(data){
+			var obj = eval('('+data+')');
+				console.log(obj);
+				$(".l").append(
+	                '<img src="'+obj.goodsImg+'"/>'
+			    );
+			    $(".top").append(
+	               	'<span>'+obj.goodsName+'</span>'
+					+'<a>'+obj.goodsDesc+'</a>'
+					+'<input type="text"/>'
+					+'<span class="s1">'+obj.goodsDesc+'</span>'
+			    );
+			    $(".l3-1").append(
+	               '<p class="p2">总计 '+obj.goodsDesc+'</p>'
+			    );
+	});
+    
+});
 </script>
