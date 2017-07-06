@@ -1,0 +1,10 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+node_modules/
+ceshi/
+gulpfile.js
+package.json
+.idea/
